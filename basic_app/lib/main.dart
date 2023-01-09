@@ -1,3 +1,4 @@
+import 'package:basic_app/home_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,8 +31,9 @@ class _RootPageState extends State<RootPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Basic App'),
+        title: const Text('Home Screen'),
       ),
+      body: HomePage(),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('Pressed Floating Action Button');
