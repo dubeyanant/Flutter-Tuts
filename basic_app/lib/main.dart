@@ -1,4 +1,5 @@
 import 'package:basic_app/home_page.dart';
+import 'package:basic_app/profile_page.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: RootPage(),
+      home: const RootPage(),
       theme: ThemeData(primarySwatch: Colors.orange),
     );
   }
@@ -27,13 +28,17 @@ class RootPage extends StatefulWidget {
 
 class _RootPageState extends State<RootPage> {
   int currentPage = 0;
+  List<Widget> pages = const [
+    HomePage(),
+    ProfilePage(),
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Home Screen'),
       ),
-      body: HomePage(),
+      body: pages[currentPage],
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           debugPrint('Pressed Floating Action Button');
