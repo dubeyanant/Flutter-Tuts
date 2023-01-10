@@ -22,6 +22,7 @@ class IntroPage extends StatelessWidget {
             padding: const EdgeInsets.all(24.0),
             child: Text(
               'We deliver groceries at your doorsteps',
+              textAlign: TextAlign.center,
               style: GoogleFonts.notoSerif(
                 fontSize: 36,
                 fontWeight: FontWeight.bold,
@@ -37,7 +38,7 @@ class IntroPage extends StatelessWidget {
           Text(
             'Fresh items everyday!',
             style: GoogleFonts.notoSerif(
-              fontSize: 12,
+              color: Colors.grey.shade600,
             ),
           ),
 
@@ -46,10 +47,14 @@ class IntroPage extends StatelessWidget {
           // get started button
           GestureDetector(
             onTap: () {
-              Navigator.pushReplacement(context,
-                  MaterialPageRoute(builder: (context) {
-                return const HomePage();
-              }));
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const HomePage();
+                  },
+                ),
+              );
             },
             child: Container(
               decoration: BoxDecoration(
