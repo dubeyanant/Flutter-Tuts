@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:grocery_app/components/grocery_item_tile.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 2),
                 itemBuilder: ((context, index) {
-                  return GroceryItemTile();
+                  return const GroceryItemTile();
                 }),
               ),
             ),
