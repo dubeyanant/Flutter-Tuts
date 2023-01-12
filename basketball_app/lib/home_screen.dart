@@ -60,7 +60,7 @@ class _HomeScreenState extends State<HomeScreen> {
         body: Column(
           children: [
             Container(
-              margin: const EdgeInsets.only(top: 20.0),
+              margin: const EdgeInsets.only(top: 50.0),
               width: double.infinity,
               child: Text(
                 'Basketball\nCounter',
@@ -75,7 +75,7 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 25.0,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
                   children: [
@@ -86,12 +86,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
+                    const SizedBox(
+                      height: 50.0,
+                    ),
                     Text(
                       '$_counter1',
                       style: GoogleFonts.poppins(
                         fontSize: 70,
                         fontWeight: FontWeight.w400,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 100.0,
                     ),
                     ElevatedButton(
                       onPressed: _incrementCounter11,
@@ -130,12 +136,18 @@ class _HomeScreenState extends State<HomeScreen> {
                         fontWeight: FontWeight.w400,
                       ),
                     ),
+                    const SizedBox(
+                      height: 50.0,
+                    ),
                     Text(
                       '$_counter2',
                       style: GoogleFonts.poppins(
                         fontSize: 70,
                         fontWeight: FontWeight.w400,
                       ),
+                    ),
+                    const SizedBox(
+                      height: 100.0,
                     ),
                     ElevatedButton(
                       onPressed: _incrementCounter21,
