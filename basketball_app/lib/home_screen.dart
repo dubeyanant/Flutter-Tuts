@@ -9,6 +9,49 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  int _counter1 = 0, _counter2 = 0;
+  void _incrementCounter11() {
+    setState(() {
+      _counter1++;
+    });
+  }
+
+  void _incrementCounter12() {
+    setState(() {
+      _counter1 = _counter1 + 2;
+    });
+  }
+
+  void _incrementCounter13() {
+    setState(() {
+      _counter1 = _counter1 + 3;
+    });
+  }
+
+  void _incrementCounter21() {
+    setState(() {
+      _counter2++;
+    });
+  }
+
+  void _incrementCounter22() {
+    setState(() {
+      _counter2 = _counter2 + 2;
+    });
+  }
+
+  void _incrementCounter23() {
+    setState(() {
+      _counter2 = _counter2 + 3;
+    });
+  }
+
+  void _reset() {
+    setState(() {
+      _counter1 = _counter2 = 0;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -44,29 +87,38 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Text(
-                      '0',
+                      '$_counter1',
                       style: GoogleFonts.poppins(
-                        fontSize: 40,
+                        fontSize: 70,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter11,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF83D45C),
+                      ),
                       child: const Text('+1'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter12,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF50D345),
+                      ),
                       child: const Text('+2'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter13,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2E8427),
+                      ),
                       child: const Text('+3'),
                     ),
                   ],
                 ),
                 Container(
                   height: 500.0,
-                  width: 2.0,
+                  width: 1.0,
                   color: Colors.black,
                 ),
                 Column(
@@ -79,22 +131,31 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Text(
-                      '0',
+                      '$_counter2',
                       style: GoogleFonts.poppins(
-                        fontSize: 40,
+                        fontSize: 70,
                         fontWeight: FontWeight.w400,
                       ),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter21,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF83D45C),
+                      ),
                       child: const Text('+1'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter22,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF50D345),
+                      ),
                       child: const Text('+2'),
                     ),
                     ElevatedButton(
-                      onPressed: () {},
+                      onPressed: _incrementCounter23,
+                      style: ElevatedButton.styleFrom(
+                        backgroundColor: const Color(0xFF2E8427),
+                      ),
                       child: const Text('+3'),
                     ),
                   ],
@@ -105,10 +166,16 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 20.0,
             ),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: _reset,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: const Color(0xFF952020),
+              ),
               child: const Text(
                 'Reset',
-                style: TextStyle(fontSize: 20.0),
+                style: TextStyle(
+                  fontSize: 20.0,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],
